@@ -1,176 +1,218 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Media Portfolio</title>
+  <title>Sandeep | Digital Marketing Portfolio</title>
   <meta
     name="description"
-    content="Portfolio website for a social media manager focused on content strategy, blogs, ad management, and data-backed brand growth."
+    content="Futuristic portfolio website for Sandeep, a digital marketing and creative professional focused on social media, content, ads, and strategy."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="page-shell">
-    <header class="hero">
-      <nav class="topbar">
-        <p class="brand">Portfolio</p>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
-          Menu
-        </button>
-        <div class="nav-links" id="nav-links">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#work">Work</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
+  <div class="intro-screen" id="intro-screen" aria-hidden="true">
+    <div class="intro-name" id="intro-name">Sandeep</div>
+  </div>
 
-      <section class="hero-content">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Social Media Management • Content • Ads • Analytics</p>
-          <h1>
-            I build brand presence with clear content, thoughtful campaigns, and data that supports better decisions.
-          </h1>
-          <p class="intro">
-            I help brands stay creative and consistent across social media through content planning, blog writing,
-            ad management, and basic analytics that keep growth measurable.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#contact">Let’s Work Together</a>
-            <a class="button button-secondary" href="#services">See My Services</a>
+  <div class="background-layer" aria-hidden="true">
+    <canvas id="grid-mesh-canvas" class="grid-mesh-canvas"></canvas>
+
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+    <div class="cursor-glow"></div>
+  </div>
+  <div class="custom-cursor" aria-hidden="true"></div>
+
+  <div class="page-shell" id="page-shell">
+    <nav class="navbar" id="navbar">
+      <a href="#top" class="nav-brand" id="nav-brand">Sandeep</a>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        Menu
+      </button>
+    </nav>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Digital Marketing | Content | Creative Strategy</p>
+            <h1>Sandeep</h1>
+            <p class="hero-role">Digital Marketing and Creative Professional</p>
+            <p class="hero-tagline">
+              I build bold digital presence with creative content and smart strategy.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact">Let's Work Together</a>
+              <a class="button button-secondary" href="#projects">View My Work</a>
+            </div>
+          </div>
+
+          <div class="hero-card reveal">
+            <p class="card-kicker">Core Focus</p>
+            <h2>Creative execution backed by clarity and consistency.</h2>
+            <ul class="focus-list">
+              <li>Social media management for growing brands</li>
+              <li>Blog writing and content direction</li>
+              <li>Creative support for brand campaigns</li>
+              <li>Ads handling and simple performance reporting</li>
+            </ul>
           </div>
         </div>
-
-        <aside class="hero-card reveal">
-          <p class="card-label">What I Do</p>
-          <ul>
-            <li>Social media strategy and calendar planning</li>
-            <li>Blog writing and content storytelling</li>
-            <li>Creative support for brand campaigns</li>
-            <li>Ad handling across brand promotions</li>
-            <li>Basic performance reporting and insights</li>
-          </ul>
-        </aside>
       </section>
-    </header>
 
-    <main>
-      <section class="section about reveal" id="about">
-        <div class="section-heading">
-          <p class="eyebrow">About Me</p>
-          <h2>Creative communication with structure behind it.</h2>
+      <section class="section reveal" id="about">
+        <div class="section-header">
+          <p class="eyebrow">About</p>
+          <h2>Creativity with structure, timing, and intent.</h2>
         </div>
         <div class="about-grid">
           <p>
-            My work sits between creativity and coordination. I support brands by planning content, writing blogs,
-            shaping social media messaging, managing ads, and tracking simple data points that show what is working.
+            I work across social media, content writing, creative support, and campaign execution to help brands stay
+            relevant, consistent, and visually strong online.
           </p>
           <p>
-            I enjoy turning ideas into content that feels relevant, consistent, and easy for audiences to connect
-            with. The goal is always to help brands grow with clarity rather than noise.
+            My approach balances ideas with coordination. That means building content that looks good, sounds right,
+            and also supports real brand goals through strategy, ads, and basic analytics.
           </p>
         </div>
       </section>
 
-      <section class="section" id="services">
-        <div class="section-heading reveal">
+      <section class="section reveal" id="services">
+        <div class="section-header">
           <p class="eyebrow">Services</p>
-          <h2>Support for brands that want both creativity and consistency.</h2>
+          <h2>Focused support for brands that want a stronger digital presence.</h2>
         </div>
-
-        <div class="cards-grid">
-          <article class="service-card reveal">
-            <span>01</span>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-index">01</div>
             <h3>Social Media Management</h3>
             <p>
-              Content planning, posting structure, platform consistency, and everyday support to keep your brand active.
+              Content planning, posting consistency, brand tone alignment, and everyday social media support.
             </p>
           </article>
-
-          <article class="service-card reveal">
-            <span>02</span>
+          <article class="service-card">
+            <div class="service-index">02</div>
             <h3>Blog Writing</h3>
             <p>
-              Blog content that matches your brand tone, improves communication, and supports long-form storytelling.
+              Long-form content that communicates clearly, supports brand voice, and adds storytelling depth.
             </p>
           </article>
-
-          <article class="service-card reveal">
-            <span>03</span>
+          <article class="service-card">
+            <div class="service-index">03</div>
             <h3>Creative Brand Content</h3>
             <p>
-              Ideas and execution support for posts, campaigns, and creative content tailored to brand goals.
+              Visual and campaign-oriented content ideas shaped around how a brand wants to present itself.
             </p>
           </article>
-
-          <article class="service-card reveal">
-            <span>04</span>
+          <article class="service-card">
+            <div class="service-index">04</div>
             <h3>Ads Management</h3>
             <p>
-              Handling paid promotions for brands with a focus on clarity, audience relevance, and campaign support.
+              Paid campaign handling with a simple, practical focus on relevance, promotion flow, and clarity.
             </p>
           </article>
-
-          <article class="service-card reveal">
-            <span>05</span>
+          <article class="service-card">
+            <div class="service-index">05</div>
             <h3>Basic Data Analytics</h3>
             <p>
-              Simple reporting and performance review to understand reach, engagement, and areas for improvement.
+              Lightweight reporting that helps identify what is performing well and where adjustments are needed.
             </p>
           </article>
         </div>
       </section>
 
-      <section class="section showcase" id="work">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Work Style</p>
-          <h2>How I bring value to a brand’s digital presence.</h2>
+      <section class="section reveal" id="projects">
+        <div class="section-header">
+          <p class="eyebrow">Projects</p>
+          <h2>Selected work shaped by content, strategy, and campaign thinking.</h2>
         </div>
-
-        <div class="showcase-grid">
-          <article class="showcase-card reveal">
-            <h3>Content That Feels On-Brand</h3>
-            <p>
-              I focus on communication that looks intentional, sounds consistent, and connects with the right audience.
-            </p>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-visual project-visual-one"></div>
+            <div class="project-content">
+              <h3>Brand Launch Campaign</h3>
+              <p>
+                Planned social messaging, creative content direction, and rollout support for a campaign launch.
+              </p>
+              <div class="project-tags">
+                <span>Social Media</span>
+                <span>Launch Strategy</span>
+                <span>Content</span>
+              </div>
+            </div>
           </article>
 
-          <article class="showcase-card reveal">
-            <h3>Campaigns With Direction</h3>
-            <p>
-              From creative planning to ad support, I help brands present offers and ideas in a more structured way.
-            </p>
+          <article class="project-card">
+            <div class="project-visual project-visual-two"></div>
+            <div class="project-content">
+              <h3>Editorial Content System</h3>
+              <p>
+                Built a structured blog and content plan to make a brand's communication more consistent.
+              </p>
+              <div class="project-tags">
+                <span>Blogs</span>
+                <span>Planning</span>
+                <span>Brand Voice</span>
+              </div>
+            </div>
           </article>
 
-          <article class="showcase-card reveal">
-            <h3>Data That Supports Better Choices</h3>
-            <p>
-              I use simple analytics to review performance, understand engagement, and guide future content decisions.
-            </p>
+          <article class="project-card">
+            <div class="project-visual project-visual-three"></div>
+            <div class="project-content">
+              <h3>Ads Performance Review</h3>
+              <p>
+                Reviewed ad delivery and content response to improve direction using simple performance insights.
+              </p>
+              <div class="project-tags">
+                <span>Ads</span>
+                <span>Analytics</span>
+                <span>Optimization</span>
+              </div>
+            </div>
           </article>
         </div>
       </section>
 
-      <section class="section contact reveal" id="contact">
+      <section class="section reveal" id="contact">
         <div class="contact-panel">
-          <div>
+          <div class="contact-copy">
             <p class="eyebrow">Contact</p>
-            <h2>Let’s create a stronger digital presence for your brand.</h2>
+            <h2>Let's shape something sharp, relevant, and memorable.</h2>
+            <p>
+              If you need support with social media, creative content, blogs, ads, or marketing coordination, let's connect.
+            </p>
           </div>
-          <a class="button button-primary" href="mailto:hello@example.com">hello@example.com</a>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:hello@example.com">hello@example.com</a>
+            <div class="social-links">
+              <a href="#">LinkedIn</a>
+              <a href="#">Instagram</a>
+              <a href="#">Behance</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-  </div>
 
-  <script src="script.js"></script>
+    <footer class="footer">
+      <p>(c) 2026 Sandeep. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
